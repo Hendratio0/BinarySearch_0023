@@ -22,13 +22,31 @@ void input()
     }
 }
 {
-    cout << "==============================" << endl;
-    cout << "Masukkan Elemen Array" << endl;
-    cout << "==============================" << endl;
+    cout << "\n==============================\n";
+    cout << "Masukkan Elemen Array \n";
+    cout << "==============================\n";
 
     for (int i = 0; i < n; i++)
     {
         cout << "Data ke-" << (i + 1) << ": ";
         cin >> elemen[i];
     }
+}
+
+void bubbleSortArray()
+{
+    int pass = 1;
+    do
+    {
+        for (int j = 0; j <= nPanjang - 1 - pass; j++)
+        {
+            if (elemen[j] > elemen[j + 1])
+            {
+                int temp = elemen[j];
+                elemen[j] = elemen[j + 1];
+                elemen[j + 1] = temp;
+            }
+        }
+        pass++;
+    } while (pass <= nPanjang - 1);
 }
