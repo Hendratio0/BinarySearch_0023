@@ -21,6 +21,7 @@ void input()
         }
     }
 }
+
 {
     cout << "\n==============================\n";
     cout << "Masukkan Elemen Array \n";
@@ -49,4 +50,20 @@ void bubbleSortArray()
         }
         pass++;
     } while (pass <= nPanjang - 1);
+}
+
+void display()
+{
+    cout << "==============================\n";
+    cout << "Elemen Array Setelah Diurutkan (Asc)\n";
+    cout << "==============================\n";
+    for (int j = 0; j < nPanjang; j++)
+    {
+        cout << elemen[j];
+        if (j < nPanjang - 1)
+        {
+            cout << ", ";
+        }
+    }
+    cout << endl;
 }
